@@ -1,9 +1,9 @@
 # PowerShell-Icinga2
 
 ## Build status
-| Master | Latest |
-|--------|--------|
-|[![Build status](https://ci.appveyor.com/api/projects/status/2uhnk7352gao3e8k/branch/master?retina=true)](https://ci.appveyor.com/project/TheFlyingCorpse/powershell-icinga2/branch/master) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/theflyingcorpse/powershell-icinga2?branch=master&retina=true)](https://ci.appveyor.com/project/TheFlyingCorpse/powershell-icinga2) |
+| Master | Development | Latest |
+|--------|-------------|--------|
+|[![Build status](https://ci.appveyor.com/api/projects/status/github/theflyingcorpse/powershell-icinga2?branch=master&retina=true)](https://ci.appveyor.com/project/TheFlyingCorpse/powershell-icinga2/branch/master) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/theflyingcorpse/powershell-icinga2?branch=development&retina=true)](https://ci.appveyor.com/project/TheFlyingCorpse/powershell-icinga2/branch/development) | [![Build status](https://ci.appveyor.com/api/projects/status/2uhnk7352gao3e8k?retina=true)](https://ci.appveyor.com/project/TheFlyingCorpse/powershell-icinga2)
 
 ## Style and stuff
 PoshCode guidelines.
