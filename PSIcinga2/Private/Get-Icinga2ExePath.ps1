@@ -5,7 +5,7 @@ function Get-Icinga2ExePath {
     )
 
     $Icinga2InstallDir = Get-Icinga2InstallDir -SuppressWarnings
-    if ($Icinga2InstallDir -ne $null) {
+    if ($null -ne $Icinga2InstallDir) {
        if (Test-Path "$Icinga2InstallDir\sbin\icinga2.exe") {
          return "$Icinga2InstallDir\sbin\icinga2.exe"
        }

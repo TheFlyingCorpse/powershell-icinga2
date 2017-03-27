@@ -53,7 +53,7 @@ function Initialize-Icinga2 {
     }
 
     # Did we get a path to the Icinga2DataDir?
-    if ($_Icinga2DataDir -eq $null -or $_Icinga2DataDir -eq "") {
+    if ($null -eq $_Icinga2DataDir -or $_Icinga2DataDir -eq "") {
       Write-Verbose "No programdata for Icinga2 found, this implies we have a fresh installation of Icinga2."
       $_Icinga2DataDir = "$env:PROGRAMDATA\icinga2"
       $Icinga2FreshInstall = $true
@@ -66,21 +66,21 @@ function Initialize-Icinga2 {
       $Icinga2FreshInstall = $false
     }
     
-    if (!($_Icinga2InstallDir -eq "" -or $_Icinga2InstallDir -eq $null)) {
+    if (!($_Icinga2InstallDir -eq "" -or $null -eq $_Icinga2InstallDir )) {
       write-verbose "Resolved Icinga2InstallDir to: $_Icinga2InstallDir"
 
     }
 
-    if (!($_Icinga2DataDir -eq "" -or $_Icinga2DataDir -eq $null)) {
+    if (!($_Icinga2DataDir -eq "" -or $null -eq $_Icinga2DataDir)) {
       write-verbose "Resolved Icinga2DataDir to: $_Icinga2DataDir"
     }
 
-    if (!($_Icinga2Exe -eq "" -or $_Icinga2Exe -eq $null)) {
+    if (!($_Icinga2Exe -eq "" -or $null -eq $_Icinga2Exe)) {
       write-verbose "Resolved Icinga2Exe path to: $_Icinga2Exe"
     }
 
 
-    if ($Icinga2FreshInstall -ne $null -and !($_Icinga2DataDir -eq "" -or $_Icinga2DataDir -eq $null) -and !($_Icinga2InstallDir -eq "" -or $_Icinga2InstallDir -eq $null)) {
+    if ($null -ne $Icinga2FreshInstall -and !($_Icinga2DataDir -eq "" -or $null -eq $_Icinga2DataDir) -and !($_Icinga2InstallDir -eq "" -or $null -eq $_Icinga2InstallDir)) {
       Copy-Icinga2Skeleton -Icinga2DataDir $_Icinga2DataDir -Icinga2InstallDir $_Icinga2InstallDir -FreshInstall $Icinga2FreshInstall
     } else {
       Write-Error $ErrorMessage
